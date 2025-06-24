@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "USPTO ZIP Downloader",
+  "version": "1.0",
+  "permissions": [
+    "downloads",
+    "storage",
+    "scripting",
+    "activeTab"          
+    ],
+  "host_permissions": [
+    "https://data.uspto.gov/*"
+  ],
+  "action": {
+    "default_title": "Download ZIPs",
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+"content_scripts": [
+  {
+    "matches": ["https://data.uspto.gov/*"],
+    "js": ["content.js"]
+  }
+]
+}
